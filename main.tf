@@ -73,3 +73,12 @@ resource "aws_route_table_association" "pubsubasso2" {
 resource "aws_eip" "myeip" {
     domain   = "vpc"
 }
+
+resource "aws_nat_gateway" "tnat" {
+  allocation_id = var.Allocation_id
+  subnet_id     = var.Public_subnet1_id
+
+  tags = {
+    Name = "tnat"
+  }
+}
