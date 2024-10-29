@@ -42,3 +42,23 @@ variable "Private_route_id" {
   type = string
   default = "rtb-0edf2cc55d5f86f9e"
 }
+
+variable "image_id" {
+  type = string
+  default = "ami-04a37924ffe27da53"
+}
+
+variable "instance_type" {
+  type = string
+  default = "t2.micro"
+}
+
+variable "Public_securitygroup_id" {
+  type = string
+  default = "sg-01e4648f7268c996c"
+}
+
+variable "Private_securitygroup_id" {
+  type = string
+  default = "sg-02fa1d29eacb29735"
+}
