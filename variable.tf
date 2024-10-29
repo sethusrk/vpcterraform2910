@@ -22,3 +22,8 @@ variable "Private_subnet1_id" {
   type = string
   default = "subnet-0f2093a5dfd26256c"
 }
+
+variable "Public_Route_id" {
+  type = string
+  default = "rtb-02381852c088ae643"
+}
