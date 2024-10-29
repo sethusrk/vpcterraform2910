@@ -61,7 +61,7 @@ resource "aws_route_table" "pubrt" {
 }
 
 resource "aws_route_table_association" "pubsubasso1" {
-  subnet_id      = var.Private_subnet1_id
+  subnet_id      = var.Public_subnet1_id
   route_table_id = var.Public_Route_id
 }
 
