@@ -59,3 +59,17 @@ resource "aws_route_table" "pubrt" {
     Name = "pubrt"
   }
 }
+
+resource "aws_route_table_association" "pubsubasso1" {
+  subnet_id      = var.Public_subnet1_id
+  route_table_id = var.Public_Route_id
+}
+
+resource "aws_route_table_association" "pubsubasso2" {
+  subnet_id      = var.Public_subnet2_id
+  route_table_id = var.Public_Route_id
+}
+
+resource "aws_eip" "myeip" {
+    domain   = "vpc"
+}

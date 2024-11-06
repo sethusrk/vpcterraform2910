@@ -21,3 +21,7 @@ output "internet_gateway_id" {
 output "public_route_table_id" {
   value = aws_route_table.pubrt.id
 }
+
+output "eip_allocation_id" {
+  value = aws_eip.myeip.id
+}
