@@ -27,3 +27,8 @@ variable "Public_Route_id" {
   type = string
   default = "rtb-0912ba6483371621c"
 }
+
+variable "Allocation_id" {
+  type = string
+  default = "eipalloc-022025ca642656bb9"
+}
