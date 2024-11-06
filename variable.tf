@@ -32,3 +32,8 @@ variable "Allocation_id" {
   type = string
   default = "eipalloc-022025ca642656bb9"
 }
+
+variable "Nat_gateway_id" {
+  type = string
+  default = "nat-082c590d7fbe35bdb"
+}

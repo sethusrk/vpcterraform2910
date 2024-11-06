@@ -29,3 +29,7 @@ output "eip_allocation_id" {
 output "nat_gateway_id" {
   value = aws_nat_gateway.tnat.id
 }
+
+output "private_route_table_id" {
+  value = aws_route_table.prirt.id
+}
