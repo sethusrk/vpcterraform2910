@@ -42,3 +42,14 @@ output "private_security_group_id" {
   value = aws_security_group.privatesg.id
 }
 
+output "public_instance1_id" {
+  value = aws_instance.publicinstance1.id
+}
+
+output "public_instance2_id" {
+  value = aws_instance.publicinstance2.id
+}
+
+output "private_instance_id" {
+  value = aws_instance.privateinstance.id
+}

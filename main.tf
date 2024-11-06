@@ -139,3 +139,33 @@ resource "aws_security_group" "privatesg" {
     Name = "privatesg"
   }
 }
+
+resource "aws_instance" "publicinstance1" {
+  ami           = var.image_id
+  instance_type = var.instance_type
+  subnet_id     = var.Public_subnet1_id
+  vpc_security_group_ids = [var.Public_securitygroup_id]
+   tags = {
+    Name = "publicinstance1"
+  }
+}
+
+resource "aws_instance" "publicinstance2" {
+  ami           = var.image_id
+  instance_type = var.instance_type
+  subnet_id     = var.Public_subnet2_id
+  vpc_security_group_ids = [var.Public_securitygroup_id]
+   tags = {
+    Name = "publicinstance2"
+  }
+}
+
+resource "aws_instance" "privateinstance" {
+  ami           = var.image_id
+  instance_type = var.instance_type
+  subnet_id     = var.Private_subnet1_id
+  vpc_security_group_ids = [var.Private_securitygroup_id]
+   tags = {
+    Name = "privateinstance"
+  }
+}
