@@ -95,3 +95,47 @@ resource "aws_route_table" "prirt" {
     Name = "prirt"
   }
 }
+
+resource "aws_route_table_association" "prisubasso" {
+  subnet_id      = var.Private_subnet1_id
+  route_table_id = var.Private_route_id
+}
+
+resource "aws_security_group" "publicsg" {
+  vpc_id      = var.vpc_id
+
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  tags = {
+    Name = "publicsg"
+  }
+}
+
+resource "aws_security_group" "privatesg" {
+  vpc_id = var.vpc_id
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  tags = {
+    Name = "privatesg"
+  }
+}

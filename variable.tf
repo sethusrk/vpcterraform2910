@@ -37,3 +37,8 @@ variable "Nat_gateway_id" {
   type = string
   default = "nat-082c590d7fbe35bdb"
 }
+
+variable "Private_route_id" {
+  type = string
+  default = "rtb-0b7b489f3664c528c"
+}

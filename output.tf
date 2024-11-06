@@ -33,3 +33,12 @@ output "nat_gateway_id" {
 output "private_route_table_id" {
   value = aws_route_table.prirt.id
 }
+
+output "public_security_group_id" {
+  value = aws_security_group.publicsg.id
+}
+
+output "private_security_group_id" {
+  value = aws_security_group.privatesg.id
+}
+
